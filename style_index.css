@@ -1,0 +1,576 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+.main__heading p {
+  font-family: "Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
+.demo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  background-color: rgb(68, 68, 68);
+  color: white;
+  background-image: url(https://png.pngtree.com/thumb_back/fw800/background/20190510/pngtree-starry-sky-white-blue-stars-image_111634.jpg);
+}
+
+.demo__container {
+  width: 100%;
+  max-width: 1149px;
+  display: flex;
+}
+
+.demo__left,
+.demo__right {
+  width: 50%;
+}
+
+.demo__right {
+  text-align: end;
+}
+
+.alo {
+  padding-left: 20px;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 56px;
+  position: sticky;
+  top: 0px;
+  background-color: white;
+}
+
+.header__container {
+  width: 100%;
+  max-width: 1149px;
+  display: flex;
+  align-items: center;
+}
+
+.header__left,
+.header__right {
+  width: 45%;
+}
+
+.header__left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.header__right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.header__logo {
+  width: 14%;
+  display: flex;
+  justify-content: center;
+}
+
+.nav__list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0px 0px 0px -33.5px;
+}
+
+.nav__item-1 a {
+  color: white;
+  background-color: #e23d31;
+  transition: all 0.3s ease;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  font-size: large;
+  padding: 15px;
+}
+
+.nav__link:hover {
+  color: white;
+  background-color: #e23d31;
+  transition: all 0.3s ease;
+}
+
+.header span {
+  padding: 0px 6px 0px 6px;
+}
+
+.header__right form {
+  margin: 0px 3px;
+  display: flex;
+  align-items: center;
+}
+
+input[type="text"] {
+  margin-right: 3px;
+  width: 180px;
+  border: 1px solid #e4e4e4;
+  outline: none;
+  padding-left: 11px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+input[type="text"]:hover {
+  box-shadow: 0px 1px 6px rgb(32 33 36 / 28%);
+}
+
+.search {
+  padding: 10px;
+  color: white;
+  background-color: black;
+  border-radius: 10px;
+}
+
+.search:hover {
+  box-shadow: 0px 1px 6px black;
+}
+
+.banner {
+  width: 100%;
+  height: 380px;
+  margin-top: -2px;
+}
+
+.banner__content {
+  width: 100%;
+  height: 365px;
+}
+
+.banner a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 40px;
+  background-color: rgba(12, 11, 11, 0.938);
+  bottom: 50px;
+  font-size: 17px;
+  font-weight: 500;
+  position: relative;
+  border-radius: 10px;
+  z-index: 5;
+}
+
+.banner i {
+  z-index: 8;
+}
+
+.banner a:hover {
+  color: black;
+  background-color: #ffdd15;
+}
+
+.banner__content img {
+  width: 100vw;
+  height: 381px;
+}
+
+.banner__content h5 {
+  font-family: cursive;
+  font-size: 60px;
+  font-weight: 700;
+  position: relative;
+  top: -100px;
+}
+
+.banner__content button {
+  background-color: #e23d31;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  margin-top: 160px !important;
+  margin: 15px;
+}
+
+.hero {
+  width: 100%;
+  height: 475px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__container {
+  width: 100%;
+  max-width: 1149px;
+  display: flex;
+  align-items: center;
+}
+
+.hero__left,
+.hero__right {
+  width: 50%;
+}
+
+.hero__left img {
+  width: 97%;
+  height: 399px;
+}
+
+.hero__right-top {
+  display: flex;
+  margin-bottom: 19px;
+  justify-content: space-between;
+}
+
+.hero__right-bottom img {
+  width: 100%;
+  height: 190px;
+}
+
+.hero__right-top img {
+  width: 48.5%;
+  height: 190px;
+}
+
+.menu {
+  width: 100%;
+  height: 462px;
+  background-image: url(https://order-cd430.web.app/img/bg-menu.webp);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu__container {
+  max-width: 1149px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu__left {
+  width: 23.55%;
+}
+
+.menu__right {
+  padding-left: 10px;
+  width: 75%;
+  display: flex;
+}
+
+.menu__left-heading {
+  width: 100%;
+}
+
+.menu__left-bottom {
+  width: 100%;
+  height: 265px;
+  background-color: white;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.menu__left-bottom ul {
+  list-style: none;
+  width: 100%;
+}
+
+.menu__left-bottom a {
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(204, 204, 204, 0.719);
+  color: black;
+  width: 88% !important;
+  font-weight: 500;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu__left-bottom a:hover {
+  color: #e23d31;
+}
+
+.menu__right-start,
+.menu__right-end {
+  width: 31.5%;
+}
+
+.menu__right p {
+  color: white;
+  height: 30%;
+  font-size: 40px;
+  font-weight: 500;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.menu__right-start-bottom {
+  height: 79.3%;
+  background-color: white;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.menu__eat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu__eat img {
+  width: 100%;
+  height: 206px;
+}
+
+.menu__eat a {
+  color: black;
+  font-size: 19px;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 4px;
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px dashed rgb(155, 155, 155);
+}
+
+.menu__eat a:hover {
+  color: #e23d31;
+}
+
+.menu__money span {
+  cursor: auto;
+  color: #e23d31;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.menu__right-center {
+  width: 37%;
+  background-color: #bf162e;
+  padding: 6px;
+  border-radius: 3px;
+}
+
+.menu__right-center-title {
+  padding: 5px;
+  height: 100%;
+}
+
+.menu__center-eat {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu__center-eat img {
+  width: 100%;
+  padding: 5px;
+  background-color: white;
+  height: 238px;
+}
+
+.menu__center-eat a {
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px dashed white;
+}
+
+.menu__center-eat a:hover {
+  color: white;
+}
+
+.menu__center-money {
+  cursor: auto;
+  color: white;
+  font-weight: 500;
+  font-size: 19px;
+  padding: 10px;
+}
+
+.menu__right-end {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.menu__right-end img {
+  height: 206px;
+}
+
+.menu__right-end-bottom {
+  height: 79.3%;
+  background-color: white;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.menu__eat-end a {
+  color: black;
+  font-size: 19px;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 4px;
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px dashed rgb(155, 155, 155);
+}
+
+.menu__eat-end a:hover {
+  color: #e23d31;
+}
+
+.menu__eat-end {
+  display: flex;
+  flex-direction: column;
+  align-items: space-around;
+}
+
+.menu__money-end {
+  display: flex;
+  justify-content: space-around;
+  font-size: 18px;
+}
+
+.menu__money-end i {
+  color: #c2c2c2c2;
+  text-decoration: line-through;
+}
+
+.menu__money-end span {
+  font-weight: 500;
+  color: #e23d31;
+}
+
+.menu__eat-end p {
+  position: absolute;
+  font-size: 14px;
+  padding: 5px 10px 5px 10px;
+  margin: -5px 0px 0px -5px;
+  height: 30px;
+  width: 52px;
+  color: white;
+  background-color: #bf162e;
+}
+
+.cartoon {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 200px;
+}
+
+.cartoon__container {
+  max-width: 1149px;
+  width: 100%;
+  display: flex;
+}
+
+.cartoon__content {
+  display: flex;
+  align-items: center;
+  width: 33.333333%;
+  border-top: 1px #c2c2c2c2 solid;
+  border-left: 1px #c2c2c2c2 solid;
+  border-bottom: 1px #c2c2c2c2 solid;
+  margin: 20px 0px 20px 0px;
+}
+
+.cartoon__content-right {
+  display: flex;
+  align-items: center;
+  width: 33.333333%;
+  border: 1px #c2c2c2c2 solid;
+  margin: 20px 0px 20px 0px;
+}
+
+.cartoon__content-img,
+.cartoon__content p {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cartoon__content img {
+  width: 90px;
+  height: 90px;
+}
+
+.footer__container {
+  display: flex;
+  width: 100%;
+  height: 350px;
+  align-items: center;
+  background-color: rgb(68, 68, 68);
+  color: white;
+  background-image: url(https://png.pngtree.com/thumb_back/fw800/background/20190510/pngtree-starry-sky-white-blue-stars-image_111634.jpg);
+}
+
+.footer__infomation,
+.footer__call,
+.footer__address {
+  width: 33.333333%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+iframe {
+  height: 300px;
+  width: 465px;
+}
+
+.footer a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer a:hover {
+  color: white;
+}
+
+.call__content {
+  padding-left: 100px;
+}
+
+.call__content-heading,
+.footer__infomation p {
+  font-size: 21px;
+  font-weight: 500;
+}
+
+.footer__infomation p {
+  margin-top: -63px;
+}
+
+.footer__infomation span {
+  margin: 20px 20px 60px 60px;
+}
+
+.footer i {
+  padding: 5px;
+}
+
+.call__content p,
+.footer__icon {
+  margin-top: -21px;
+}
+
+.footer p {
+  text-align: center;
+}
