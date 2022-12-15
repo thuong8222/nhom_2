@@ -76,10 +76,7 @@ include("admin__menu.php");
                             } else {
                                 echo `<h3>Khong co san pham</h3>`;
                             }
-
                             ?>
-
-
                         </select>
                     </td>
                 </tr>
@@ -115,7 +112,7 @@ if (isset($_POST['submit'])) {
     if (isset($_FILES['image']['name'])) {
         $image = $_FILES['image']['name'];
         $ext = end(explode('.', $image));
-        $image = "quynh" . rand(00000, 99999) . "." . $ext;
+        $image = "thuong" . rand(00000, 99999) . "." . $ext;
         $temp_name = $_FILES['image']['tmp_name'];
         $upload = move_uploaded_file($temp_name, "./img/$image");
         echo $image;
