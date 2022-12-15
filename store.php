@@ -79,6 +79,7 @@ include('header_menu.php');
 </div>
 <div class="main">
     <div class="main__container">
+        <!-- bdau 1 cate -->
         <div class="main__heading">
             <p>Gà</p>
             <img src="./img/content.png" alt="" />
@@ -96,16 +97,20 @@ include('header_menu.php');
           $price = $row['price'];
           $price_2 = $row['price_2'];
           if ($price_2 < 10) {
+            //00 + 3 = 003
             $price_2 = '00' . $price_2;
           } else if ($price_2 < 100) {
             $price_2 = '0' . $price_2;
+            //0 + 10 = 010
           }
 
           $desc = $row['desc'];
           $image = $row['image'];
           $pro = $row['pro'];
           $price_3 = ($price * 1000 + $price_2) - ($price * 1000 + $price_2) * $pro / 100;
+
           if ($price_3 % 1000 < 10) {
+            // 3.002đ = 3 + ".00"+ 2
             $price_4 = floor($price_3 / 1000) . ".00" . ($price_3 % 1000);
           } else if ($price_3 % 1000 < 100) {
             $price_4 = floor($price_3 / 1000) . ".0" . ($price_3 % 1000);
@@ -139,8 +144,8 @@ include('header_menu.php');
       }
       ?>
 
-
         </div>
+        <!--het nd 1 cate   -->
         <div class="main__heading">
             <p>Bánh mỳ</p>
             <img src="./img/content.png" alt="" />

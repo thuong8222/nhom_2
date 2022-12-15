@@ -10,6 +10,7 @@
             <tr>
                 <th>STT</th>
                 <th>Title</th>
+                <th>Appearance</th>
                 <th>Active</th>
             </tr>
             <?php

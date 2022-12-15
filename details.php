@@ -10,8 +10,7 @@ $id_food = $_GET['id'];
 
 <div class="hero">
     <!-- kiểm tra xem sản phẩm có trong giỏ hàng chưa -->
-    <?php
-  if (isset($_GET['add'])) {
+    <?php  if (isset($_GET['add'])) {
     $id = $_GET['add'];
     $size = $_POST['size'];
     $sql = "SELECT * FROM `cart` WHERE id='$id'";
@@ -29,7 +28,7 @@ $id_food = $_GET['id'];
     } else {
       $sql_2 = "INSERT INTO cart(id,price,price_2,size)
        values('$id','$price','$price_2','$size')
-       ";
+       ";                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
       $res_2 = mysqli_query($con, $sql_2);
       // echo $sql_2;
       echo "<script>window.open('cart.php','_self')</script>";
@@ -57,9 +56,12 @@ $id_food = $_GET['id'];
       } else if ($price_2 < 100) {
         $price_2 = '0' . $price_2;
       }
+      
       $price_3 = ($price * 1000 + $price_2) - ($price * 1000 + $price_2) * $pro / 100;
       if ($price_3 % 1000 < 10) {
+        // 3.002đ = 3 + ".00"+ 2
         $price_4 = floor($price_3 / 1000) . ".00" . ($price_3 % 1000);
+        
       } else if ($price_3 % 1000 < 100) {
         $price_4 = floor($price_3 / 1000) . ".0" . ($price_3 % 1000);
       } else {
@@ -86,7 +88,6 @@ $id_food = $_GET['id'];
           <a href='https://mail.google.com/mail/u/0/#inbox'><i class='fa fa-envelope-square'></i></a>
         </div>
       </div>
-     
         ";
     }
 

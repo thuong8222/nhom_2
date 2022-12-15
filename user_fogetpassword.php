@@ -41,10 +41,10 @@ include('header_menu.php');
                 <span>Đăng nhập</span>
             </div>
             <div class="content__left-title">
-                <span>ĐĂNG NHẬP HỆ THỐNG</span>
+                <span>Quên mật khẩu</span>
             </div>
             <div class="form">
-                <form action="login.php" method="POST">
+                <form action="user_fogetpassword" method="POST">
                     <table>
                         <tr>
                             <th>Tài khoản<small>(*)</small></td>

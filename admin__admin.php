@@ -1,20 +1,23 @@
 <?php 
     include("admin__menu.php");
 ?>
-    <div class="center">
-        <div class="container">
-            <!-- h1{Home}+.col-3*4>h1{5}{Cate} -->
-            <h1>Table Admin</h1>
-            <a href="admin__add.php" class="btn__admin">Add Admin </a>
-            <table>
-                <tr>
-                    <th>STT</th>
-                    <th>Name</th>
-                    <th>UserName</th>
-                    <th>Actions</th>
-                </tr>
-                <!-- Hiện tất cả dữ liệu trên sql ra table -->
-                <?php
+<div class="center">
+    <div class="container">
+        <!-- h1{Home}+.col-3*4>h1{5}{Cate} -->
+        <h1>Table Admin</h1>
+        <a href="admin__add.php" class="btn__admin">Add Admin </a>
+        <table>
+            <tr>
+                <th>STT</th>
+                <th>FullName</th>
+                <th>UserName</th>
+                <th>Password</th>
+
+
+                <th>Actions</th>
+            </tr>
+            <!-- Hiện tất cả dữ liệu trên sql ra table -->
+            <?php
                 $sql = "SELECT * FROM `ad`";
                 $res = mysqli_query($con, $sql);
                 if(isset($res)){
@@ -24,11 +27,14 @@
                             $id = $rows['id'];
                             $full_name = $rows['full_name'];
                             $user_name = $rows['user_name'];
+                            $passw = $rows['password'];
                             echo"
                             <tr>
                             <td>$id</td>
-                           <td>$full_name</td>
+                            <td>$full_name</td>
                             <td>$user_name</td>
+                            <td>$passw</td>
+                            
                              <td>
                                  <a href='admin__update__password.php?id=$id' class='btn__update'>Update Password</a>
                                  <a href='admin__update.php?id=$id' class='btn__update'>Update</a>
@@ -40,9 +46,9 @@
                     }
                 }
                 ?>
-            </table>
-        </div>
+        </table>
     </div>
+</div>
 <?php 
     include("admin__footer.php");
 ?>

@@ -9,19 +9,60 @@ include("admin__menu.php");
             <table>
                 <tr>
                     <td>
-                        name:
+                        Full Name:
                     </td>
                     <td>
-                        <input type="text" name="name" id="" placeholder="name" required>
+                        <input type="text" name="name" id="" placeholder="full name" required>
                     </td>
                 </tr>
+                <tr>
+                    <td>
+                        User Name:
+                    </td>
+                    <td>
+                        <input type="text" name="user" id="" placeholder="name" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Sex:
+                    </td>
+                    <td><select name="gen" id="">
+                            <option value="Nữ">Nữ</option>
+                            <option value="Nam">Nam</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>phone </td>
+                    <td><input type="number" name="phone" id="" required></td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td><input type="email" name="email" id=""
+                            pattern="^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        address <small>(*)</small>
+                    </td>
+                    <td><input type="text" name="address" id="" required></td>
+                </tr>
+
+
                 <tr>
                     <td>
                         Password:
                     </td>
                     <td>
-                        <input type="password" name="password" id="" placeholder="Password" require>
+                        <input type="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                            title="Phải chứa ít nhất 1 số và 1 chữ hoa và chữ thường và có ít nhất 8 ký tự trở lên "
+                            id="" placeholder="Password" required>
                     </td>
+                </tr>
+                <tr>
+
                 </tr>
                 <tr>
                     <td colspan="2">
@@ -36,15 +77,23 @@ include("admin__menu.php");
 include("admin__footer.php");
 ?>
 <?php
-// Thêm dữ liệu ng dùng
+
 if (isset($_POST['submit'])) {
     $name = $_POST['name'];
-    // echo $name;
-    $password = $_POST['password'];
-    // echo $password;
-    // INSERT INTO ten bang(ten cot) VALUES ('$gia tri')
-    $sql = "INSERT INTO `user` (name,password)
-        VALUES ('$name','$password')
+    $user = $_POST['user'];
+    $phone = $_POST['phone'];
+    $email = $_POST['email'];
+    $address = $_POST['address'];
+    $sex = $_POST['gen'];
+
+
+    $password = md5($_POST['password']);
+    $password_2 = md5($_POST['password_2']);
+
+
+
+    $sql = "INSERT INTO `user` (name,password,password_2,user,gen,phone, email, address )
+        VALUES ('$name','$password' ,'$password_2', '$user', '$sex', '$phone', '$email', '$address')
         ";
     if ($con->query($sql) === TRUE) {
         echo "Yes";

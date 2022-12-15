@@ -52,7 +52,7 @@ include("admin__menu.php");
                         Image:
                     </td>
                     <td>
-                        <input type="file" name="image">
+                        <input type="file" name="image" accept="image/png, image/jpeg">
                     </td>
                 </tr>
 
@@ -82,7 +82,7 @@ include("admin__menu.php");
                 </tr>
                 <tr>
                     <td>
-                        Active:
+                        Appearance
                     </td>
                     <td>
                         <input type="radio" name="active" value="Yes">Yes
@@ -90,6 +90,8 @@ include("admin__menu.php");
                     </td>
                 </tr>
                 <tr>
+
+
                     <td colspan="2"><input type="submit" name="submit" value="Add Food"></td>
                 </tr>
             </table>

@@ -15,6 +15,7 @@ include("admin__menu.php");
                 <th>Sale (%)</th>
                 <th>Image</th>
                 <th>Category</th>
+                <th>Appearance</th>
                 <th>Active</th>
             </tr>
             <?php

@@ -4,13 +4,20 @@ include("admin__menu.php");
 <div class="center">
     <div class="container">
         <!-- h1{Home}+.col-3*4>h1{5}{Cate} -->
-        <h1>Table Admin</h1>
-        <a href="admin__user__add.php" class="btn__admin">Add Admin </a>
+        <h1>Table user</h1>
+        <a href="admin__user__add.php" class="btn__admin">Add user </a>
         <table>
             <tr>
                 <th>STT</th>
-                <th>Name</th>
+                <th>FullName</th>
+                <th>UserName</th>
                 <th>Password</th>
+
+                <th>Sex</th>
+                <th>Address</th>
+                <th>Phone</th>
+                <th>Email</th>
+
                 <th>Actions</th>
             </tr>
             <?php
@@ -23,12 +30,26 @@ include("admin__menu.php");
                     while ($rows = mysqli_fetch_array($res)) {
                         $id = $rows['id'];
                         $name = $rows['name'];
+                        $user = $rows['user'];
                         $password = $rows['password'];
+                        
+                        $gen = $rows['gen'];
+                        $address = $rows['address'];
+                        $phone = $rows['phone'];
+                        $email = $rows['email'];
+                        
                         echo "
                             <tr>
                             <td>$id</td>
                             <td>$name</td>
+                            <td>$user</td>
                             <td>$password</td>
+                            
+                            <td>$gen</td>
+                            <td>$address</td>
+                            <td>$phone</td>
+                            <td>$email</td>
+                            
                             <td>
                                  <a href='admin__user__update.php?id=$id' class='btn__update'>Update</a>
                                  <a href='admin__user__delete.php?id=$id' class='btn__delete'>Delete</a>
